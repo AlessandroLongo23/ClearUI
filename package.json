@@ -6,12 +6,12 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/your-username/clear-ui.git"
+		"url": "git+https://github.com/AlessandroLongo23/ClearUI"
 	},
 	"bugs": {
-		"url": "https://github.com/your-username/clear-ui/issues"
+		"url": "https://github.com/AlessandroLongo23/ClearUI/issues"
 	},
-	"homepage": "https://github.com/your-username/clear-ui#readme",
+	"homepage": "https://github.com/AlessandroLongo23/ClearUI#readme",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
