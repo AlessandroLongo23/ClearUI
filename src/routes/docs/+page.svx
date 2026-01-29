@@ -1,0 +1,43 @@
+# Getting Started with ClearUI
+
+ClearUI is a modern, tree-shakeable Svelte 5 UI component library designed for building beautiful and accessible user interfaces.
+
+## Features
+
+- **Tree-shakeable**: Only import what you need, keeping your bundle size small
+- **Svelte 5 Ready**: Built with Svelte 5 runes and snippets
+- **TypeScript**: Full TypeScript support with proper type definitions
+- **Tailwind CSS**: Styled with Tailwind CSS for easy customization
+- **Accessible**: Built with accessibility in mind
+
+## Quick Start
+
+```bash
+npm install @aspect/clear-ui
+```
+
+Then import the components you need:
+
+```svelte
+<script>
+  import { Button, Card, Input, Badge } from '@aspect/clear-ui';
+</script>
+
+<Button variant="primary">Click me</Button>
+```
+
+## Individual Imports
+
+For even better tree-shaking, you can import components directly:
+
+```svelte
+<script>
+  import Button from '@aspect/clear-ui/Button';
+  import Card from '@aspect/clear-ui/Card';
+</script>
+```
+
+## Next Steps
+
+- Check out the [Installation](/docs/installation) guide for detailed setup instructions
+- Browse the [Components](/docs/button) section to see all available components

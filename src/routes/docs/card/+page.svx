@@ -1,0 +1,116 @@
+<script>
+  import { Card, Button } from '$lib';
+</script>
+
+# Card
+
+Cards are containers for displaying content and actions about a single subject.
+
+## Import
+
+```svelte
+import { Card } from '@aspect/clear-ui';
+// or
+import Card from '@aspect/clear-ui/Card';
+```
+
+## Basic Usage
+
+<div class="not-prose rounded-lg border border-gray-200 bg-gray-100 p-6">
+  <Card>
+    <h3 class="text-lg font-semibold">Card Title</h3>
+    <p class="mt-2 text-gray-600">This is a basic card with some content inside.</p>
+  </Card>
+</div>
+
+```svelte
+<Card>
+  <h3 class="text-lg font-semibold">Card Title</h3>
+  <p class="mt-2 text-gray-600">This is a basic card with some content inside.</p>
+</Card>
+```
+
+## Variants
+
+<div class="not-prose flex flex-col gap-4 rounded-lg border border-gray-200 bg-gray-100 p-6">
+  <Card variant="elevated">
+    <strong>Elevated</strong> - Default style with shadow
+  </Card>
+  <Card variant="outlined">
+    <strong>Outlined</strong> - Border without shadow
+  </Card>
+  <Card variant="filled">
+    <strong>Filled</strong> - Subtle background color
+  </Card>
+</div>
+
+```svelte
+<Card variant="elevated">Elevated - Default style with shadow</Card>
+<Card variant="outlined">Outlined - Border without shadow</Card>
+<Card variant="filled">Filled - Subtle background color</Card>
+```
+
+## With Header and Footer
+
+<div class="not-prose rounded-lg border border-gray-200 bg-gray-100 p-6">
+  <Card padding="none">
+    {#snippet header()}
+      <h3 class="text-lg font-semibold">Subscription Plan</h3>
+    {/snippet}
+    
+    <div class="p-6">
+      <p class="text-gray-600">Choose the plan that works best for you.</p>
+      <p class="mt-4 text-3xl font-bold">$19<span class="text-lg text-gray-500">/month</span></p>
+    </div>
+    
+    {#snippet footer()}
+      <div class="flex gap-2">
+        <Button variant="primary">Subscribe</Button>
+        <Button variant="ghost">Learn more</Button>
+      </div>
+    {/snippet}
+  </Card>
+</div>
+
+```svelte
+<Card padding="none">
+  {#snippet header()}
+    <h3 class="text-lg font-semibold">Subscription Plan</h3>
+  {/snippet}
+  
+  <div class="p-6">
+    <p class="text-gray-600">Choose the plan that works best for you.</p>
+    <p class="mt-4 text-3xl font-bold">$19<span class="text-lg text-gray-500">/month</span></p>
+  </div>
+  
+  {#snippet footer()}
+    <div class="flex gap-2">
+      <Button variant="primary">Subscribe</Button>
+      <Button variant="ghost">Learn more</Button>
+    </div>
+  {/snippet}
+</Card>
+```
+
+## Padding Options
+
+<div class="not-prose flex flex-col gap-4 rounded-lg border border-gray-200 bg-gray-100 p-6">
+  <Card padding="sm">Small padding</Card>
+  <Card padding="md">Medium padding (default)</Card>
+  <Card padding="lg">Large padding</Card>
+</div>
+
+```svelte
+<Card padding="sm">Small padding</Card>
+<Card padding="md">Medium padding (default)</Card>
+<Card padding="lg">Large padding</Card>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `variant` | `'elevated' \| 'outlined' \| 'filled'` | `'elevated'` | Visual style variant |
+| `padding` | `'none' \| 'sm' \| 'md' \| 'lg'` | `'md'` | Internal padding |
+| `header` | `Snippet` | `undefined` | Optional header slot |
+| `footer` | `Snippet` | `undefined` | Optional footer slot |

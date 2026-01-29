@@ -1,0 +1,66 @@
+# Installation
+
+## Requirements
+
+- Svelte 5.0.0 or higher
+- A Svelte/SvelteKit project
+
+## Install via npm
+
+```bash
+npm install @aspect/clear-ui
+```
+
+## Install via pnpm
+
+```bash
+pnpm add @aspect/clear-ui
+```
+
+## Install via yarn
+
+```bash
+yarn add @aspect/clear-ui
+```
+
+## Tailwind CSS Setup
+
+ClearUI components use Tailwind CSS classes. Make sure Tailwind CSS is configured in your project.
+
+If you don't have Tailwind CSS installed, follow the [official Tailwind CSS installation guide](https://tailwindcss.com/docs/installation).
+
+## Usage
+
+Import components from the main package:
+
+```svelte
+<script>
+  import { Button, Input, Card, Badge } from '@aspect/clear-ui';
+</script>
+
+<Button>Hello World</Button>
+```
+
+Or import individual components for optimal tree-shaking:
+
+```svelte
+<script>
+  import Button from '@aspect/clear-ui/Button';
+</script>
+
+<Button variant="primary">Hello World</Button>
+```
+
+## TypeScript Support
+
+ClearUI is written in TypeScript and provides full type definitions out of the box. No additional `@types` packages are needed.
+
+```svelte
+<script lang="ts">
+  import { Button } from '@aspect/clear-ui';
+  
+  // TypeScript will provide autocomplete for variant, size, etc.
+</script>
+
+<Button variant="primary" size="lg">Typed Button</Button>
+```

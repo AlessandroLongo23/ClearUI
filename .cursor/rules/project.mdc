@@ -1,0 +1,18 @@
+### Progetto: Setup Libreria UI Svelte "ClearUI" con Tree Shaking
+
+Voglio configurare un nuovo progetto SvelteKit strutturato come libreria di componenti riutilizzabili chiamata **ClearUI**. L'obiettivo è pubblicarla su NPM e avere un sito di documentazione integrato.
+
+**Requisiti del setup:**
+1. **Struttura Library:** Configura il progetto usando `@sveltejs/package`. Tutti i componenti devono risiedere in `src/lib`.
+2. **Esportazioni & Tree Shaking:** - Configura il file `src/lib/index.js` (o .ts) per esportare i componenti singolarmente (es. `export { default as Button } from './Button.svelte';`).
+   - Assicurati che il `package.json` contenga il campo `"sideEffects": false` per istruire i bundler (Vite, Webpack, Rollup) che il codice è "puro" e facilitare il tree shaking.
+   - Configura correttamente il campo `exports` nel `package.json` per mappare i punti di ingresso della libreria.
+3. **Showcase/Doc Site:** Utilizza la cartella `src/routes` per creare un sito di documentazione con una sidebar di navigazione.
+4. **MDSveX:** Installa e configura `mdsvex` per scrivere la documentazione in Markdown usando i componenti Svelte.
+5. **Package.json:**
+   - Nome: `@tuo-username/clear-ui`.
+   - Script per il build: `npm run package`.
+   - `peerDependencies`: includi `svelte` per evitare duplicazioni della runtime.
+6. **Styling:** Configura il sistema CSS in modo che sia incapsulato nei componenti (Svelte scoped CSS) per evitare conflitti globali nei progetti esterni.
+
+**Task immediato:** Genera la struttura delle cartelle e i file di configurazione (`svelte.config.js`, `vite.config.js`). Crea un componente di esempio `Button.svelte` in `src/lib`, esportalo in `index.js` e crea una pagina di documentazione in `src/routes/docs/button.md` che mostri il componente in azione.

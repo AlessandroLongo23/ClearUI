@@ -1,0 +1,98 @@
+<script>
+  import { Button } from '$lib';
+</script>
+
+# Button
+
+Buttons allow users to trigger actions with a single tap.
+
+## Import
+
+```svelte
+import { Button } from '@aspect/clear-ui';
+// or
+import Button from '@aspect/clear-ui/Button';
+```
+
+## Basic Usage
+
+<div class="not-prose flex flex-wrap gap-4 rounded-lg border border-gray-200 bg-white p-6">
+  <Button>Default Button</Button>
+</div>
+
+```svelte
+<Button>Default Button</Button>
+```
+
+## Variants
+
+The Button component supports multiple variants for different use cases.
+
+<div class="not-prose flex flex-wrap gap-4 rounded-lg border border-gray-200 bg-white p-6">
+  <Button variant="primary">Primary</Button>
+  <Button variant="secondary">Secondary</Button>
+  <Button variant="outline">Outline</Button>
+  <Button variant="ghost">Ghost</Button>
+  <Button variant="danger">Danger</Button>
+</div>
+
+```svelte
+<Button variant="primary">Primary</Button>
+<Button variant="secondary">Secondary</Button>
+<Button variant="outline">Outline</Button>
+<Button variant="ghost">Ghost</Button>
+<Button variant="danger">Danger</Button>
+```
+
+## Sizes
+
+Buttons come in three sizes: `sm`, `md` (default), and `lg`.
+
+<div class="not-prose flex flex-wrap items-center gap-4 rounded-lg border border-gray-200 bg-white p-6">
+  <Button size="sm">Small</Button>
+  <Button size="md">Medium</Button>
+  <Button size="lg">Large</Button>
+</div>
+
+```svelte
+<Button size="sm">Small</Button>
+<Button size="md">Medium</Button>
+<Button size="lg">Large</Button>
+```
+
+## Loading State
+
+Show a loading spinner to indicate an action is in progress.
+
+<div class="not-prose flex flex-wrap gap-4 rounded-lg border border-gray-200 bg-white p-6">
+  <Button loading>Loading...</Button>
+  <Button variant="outline" loading>Processing</Button>
+</div>
+
+```svelte
+<Button loading>Loading...</Button>
+<Button variant="outline" loading>Processing</Button>
+```
+
+## Disabled State
+
+<div class="not-prose flex flex-wrap gap-4 rounded-lg border border-gray-200 bg-white p-6">
+  <Button disabled>Disabled</Button>
+  <Button variant="outline" disabled>Disabled Outline</Button>
+</div>
+
+```svelte
+<Button disabled>Disabled</Button>
+<Button variant="outline" disabled>Disabled Outline</Button>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `variant` | `'primary' \| 'secondary' \| 'outline' \| 'ghost' \| 'danger'` | `'primary'` | Visual style variant |
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Size of the button |
+| `loading` | `boolean` | `false` | Shows a loading spinner |
+| `disabled` | `boolean` | `false` | Disables the button |
+
+The Button also accepts all standard HTML button attributes.
